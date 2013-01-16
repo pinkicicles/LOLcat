@@ -1,4 +1,7 @@
 LOLcat::Application.routes.draw do
+  resources :teams
+
+
   get "welcome/index"
 
   # The priority is based upon order of creation:

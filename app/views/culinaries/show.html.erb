@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Artist:</b>
+  <%= @culinary.Artist %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @culinary.Name %>
+</p>
+
+<p>
+  <b>Dishes:</b>
+  <%= @culinary.Dishes %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @culinary.Location %>
+</p>
+
+
+<%= link_to 'Edit', edit_culinary_path(@culinary) %> |
+<%= link_to 'Back', culinaries_path %>

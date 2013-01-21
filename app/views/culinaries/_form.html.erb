@@ -1,0 +1,33 @@
+<%= form_for(@culinary) do |f| %>
+  <% if @culinary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@culinary.errors.count, "error") %> prohibited this culinary from being saved:</h2>
+
+      <ul>
+      <% @culinary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Artist %><br />
+    <%= f.text_field :Artist %>
+  </div>
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Dishes %><br />
+    <%= f.text_area :Dishes %>
+  </div>
+  <div class="field">
+    <%= f.label :Location %><br />
+    <%= f.text_field :Location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

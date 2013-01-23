@@ -2,13 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "bootstrap";
 
-/* universal */
 
-html {
-  overflow-y: scroll;
-}
 
 body
 {
@@ -27,19 +22,4 @@ text-align:left;
 padding:8px;
 }
 
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
-}
 

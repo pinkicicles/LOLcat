@@ -1,4 +1,7 @@
 LOLcat::Application.routes.draw do
+  resources :chefs
+
+
   resources :culinaries
 
 

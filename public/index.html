@@ -1,8 +1,32 @@
+
 <!DOCTYPE html>
 <html>
-<img src="http://3.bp.blogspot.com/-zdHP8N3X0y8/Tj1J10C44II/AAAAAAAAAA0/Ex2kQXtiZcg/s1600/LOLCATS+-+Such+Misfortune+Blog+%25281%2529.png" alt="HTML Dog" />
-
-<a href="http://www.linkedin.com/pub/connie-wu/27/774/3b6/"> Connie's LinkedIn Profile
-</a>
-
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "sample app", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "Help",    '#' %></li>
+              <li><%= link_to "Sign in", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>

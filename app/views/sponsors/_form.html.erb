@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<div class="row">
+<div class="six columns">
   <div class="field">
     <%= f.label :Name %><br />
     <%= f.text_field :Name %>
@@ -28,6 +30,9 @@
     <%= f.text_field :Email %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Sign up »", :class => "small radius button" %>
   </div>
+  </div>
+</div>
+</div>
 <% end %>

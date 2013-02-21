@@ -6,7 +6,23 @@
     <%= javascript_include_tag 'application' %> 
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    	<%= yield %>
-  </body>
+  <div class="row">
+	<div class="nine columns">
+  		<body>
+
+        <% if alert %>
+          <div class="alert alert-error"> 
+            <%= alert %>
+          </div>
+        <% end %>
+        <% if notice %>
+          <div class="alert alert-success"> 
+            <%= notice %>
+          </div>
+          <% end %>
+    		<%= yield %>
+  		</body>
+
+		</div>
+	</div>
 </html>

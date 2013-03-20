@@ -1,0 +1,5 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+connie:
+  email: wuconnie@seas.upenn.edu
+  encrypted_password: $2a$10$NneO46Ix3sKmKTHqZ.HpdudaCSC3BujoL6Raq9Ljocef6323E5ZUu
+

@@ -10,6 +10,7 @@ gem 'devise'
 group :development do 
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'letter_opener'
 end 
 
 

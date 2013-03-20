@@ -19,7 +19,7 @@ it "does not repeat name" do
   	chef.save
 
   	chef = Chef.new
-  	chef.email = "Connie"
+  	chef.name = "Connie"
   	chef.should_not be_valid
   	#chef.valid?.should == false
 

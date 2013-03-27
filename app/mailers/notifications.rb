@@ -1,4 +1,6 @@
 class Notifications < ActionMailer::Base
+  include SendGrid
+  
   default from: "from@example.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml

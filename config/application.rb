@@ -61,7 +61,7 @@ module LOLcat
 
     config.assets.initialize_on_precompile = false
 
-    config.action_mailer.delivery_method = :letter_opener
+    config.action_mailer.delivery_method = :sendgrid
     
 
   end

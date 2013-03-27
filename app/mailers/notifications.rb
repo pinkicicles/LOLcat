@@ -6,9 +6,9 @@ class Notifications < ActionMailer::Base
   #
   #   en.notifications.new_meal.subject
   #
-  def new_meal
+  def new_meal(chef)
     @greeting = "Hi, a new meal has been requested"
-    mail to: "to@example.org"
+    mail to: chef.email
   end
 
 end

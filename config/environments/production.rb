@@ -73,7 +73,7 @@ LOLcat::Application.configure do
     :password => ENV['SENDGRID_PASSWORD'],
     :domain => 'heroku.com'
   }
-
+  
   config.action_mailer.default_url_options = { :host => 'hw01.herokuapp.com' }
 
 end

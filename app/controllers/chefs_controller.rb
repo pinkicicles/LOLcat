@@ -46,6 +46,7 @@ class ChefsController < ApplicationController
       if @chef.save
         format.html { redirect_to @chef, notice: 'Chef was successfully created.' }
         format.json { render json: @chef, status: :created, location: @chef }
+        Notifications.new_meal.deliver
       else
         format.html { render action: "new" }
         format.json { render json: @chef.errors, status: :unprocessable_entity }

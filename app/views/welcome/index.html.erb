@@ -20,10 +20,31 @@
   </p>
    <p>
   <%= link_to 'Sponsor Sign-up', new_sponsor_path %>
- 
 	  </p>
+ <p>
+    <div id="clickme">
+    <input type="button" value="Click for Help">
+    </div>
+
+    <div id="helptext">
+      Contact wuconnie@seas.upenn.edu if you have any questions">
+    </div>
+    </p>
     </div>
   </div>
+
+
+
+<script>
+$('#helptext').hide()
+$('#clickme').click(function() {
+  $('#helptext').toggle('slow', function() {
+    // Animation complete.
+  });
+});
+</script>
+
+
   <div class="six columns">
     <div class="panel callout radius">
       <h5>This is a funny picture</h5>
@@ -32,6 +53,7 @@
 	</p>
     </div>
   </div>
+
 </div>
 
 

@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '2.1'
 gem 'devise'
+gem 'jquery-ui-rails'
+
+gem "watu_table_builder", :require => "table_builder", :git => "git://github.com/watu/table_builder.git"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

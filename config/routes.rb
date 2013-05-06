@@ -1,4 +1,7 @@
 LOLcat::Application.routes.draw do
+  resources :meals
+
+
   devise_for :users
 
   resources :sponsors

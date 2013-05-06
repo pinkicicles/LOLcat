@@ -17,5 +17,5 @@
 
 
 $(function() {
-  $("#meal_date").datepicker();
+  $("#meal_date").datepicker({dateFormat: 'yy/mm/dd'});
 });

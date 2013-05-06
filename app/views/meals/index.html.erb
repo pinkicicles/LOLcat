@@ -28,20 +28,6 @@
 <% end %>
 </table>
 
-<div id="calendar">
-
-  <%= calendar_for @meals, :year => @date.year, :month => @date.month do |calendar|  %>
-  <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
-  <%= calendar.day(:day_method => :date) do |date, meals| %>
-    <%= date.day %>
-    <ul>
-        <% for meal in meals %>
-          <li><%= link_to h(meal.name), meal %></li>
-        <% end %>
-    </ul>
-    <% end %>
-  <% end %>
-</div>
 
 <br />
 

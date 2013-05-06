@@ -20,6 +20,8 @@ LOLcat::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
@@ -76,6 +78,6 @@ LOLcat::Application.configure do
     :domain => 'hw01.herokuapp.com'
   }
 
-  config.action_mailer.default_url_options = { :host => 'hw01.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'foodie196.herokuapp.com' }
 
 end

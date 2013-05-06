@@ -28,24 +28,6 @@
 <% end %>
 </table>
 
-<div id="calendar">
- <h2 id="month">
-    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
-    <%=h @date.strftime("%B %Y") %>
-    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
- </h2>
-  <%= calendar_for @meals, :year => @date.year, :month => @date.month do |calendar|  %>
-  <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
-  <%= calendar.day(:day_method => :date) do |date, meals| %>
-    <%= date.day %>
-    <ul>
-        <% for meal in meals %>
-          <li><%= link_to h(meal.name), meal %></li>
-        <% end %>
-    </ul>
-    <% end %>
-  <% end %>
-</div>
 
 <br />
 

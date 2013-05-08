@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :chef %><br />
-    <%= f.text_field :chef %>
+    <%= f.collection_select :chef, Chef.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
@@ -36,6 +36,7 @@
     <%= f.text_area :location %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create New Meal", :class => "round button" %>
+  </div>
   </div>
 <% end %>

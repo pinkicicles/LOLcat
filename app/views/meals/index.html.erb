@@ -1,6 +1,32 @@
-<h1>Listing meals</h1>
+<center><h1>Meals of the Month</h1></center>
 
-<table>
+
+
+<center><a class="btn btn-large btn-success" href="/meals/new">Create A New Meal</a></center>
+<br></br>
+<div id="calendar">
+ <h2 id="month">
+    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
+    <%=h @date.strftime("%B %Y") %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
+ </h2>
+  <%= calendar_for @meals, :year => @date.year, :month => @date.month do |calendar|  %>
+  <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+  <%= calendar.day(:day_method => :date) do |date, meals| %>
+    <%= date.day %>
+    <ul>
+        <% for meal in meals %>
+          <li><%= link_to h(meal.name), meal %></li>
+        <% end %>
+    </ul>
+    <% end %>
+  <% end %>
+</div>
+<br></br>
+
+<center><h1>List of all Meals</h1></center>
+
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Chef</th>
@@ -27,27 +53,6 @@
   </tr>
 <% end %>
 </table>
-
-<center><a class="btn btn-large btn-success" href="/meals/new">Create A New Meal</a></center>
-<br></br>
-<div id="calendar">
- <h2 id="month">
-    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
-    <%=h @date.strftime("%B %Y") %>
-    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
- </h2>
-  <%= calendar_for @meals, :year => @date.year, :month => @date.month do |calendar|  %>
-  <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
-  <%= calendar.day(:day_method => :date) do |date, meals| %>
-    <%= date.day %>
-    <ul>
-        <% for meal in meals %>
-          <li><%= link_to h(meal.name), meal %></li>
-        <% end %>
-    </ul>
-    <% end %>
-  <% end %>
-</div>
 
 <br />
 

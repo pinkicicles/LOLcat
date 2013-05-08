@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :chef %><br />
-    <%= f.collection_select :chef, Chef.all, :id, :name %>
+    <%= f.collection_select :chef, Chef.all, :name, :name %>
   </div>
   <div class="field">
     <%= f.label :name %><br />

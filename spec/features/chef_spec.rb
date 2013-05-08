@@ -14,7 +14,7 @@ describe 'Chefs' do
 		click_link "New Chef"
 		fill_in "Name", with: "Connie Wu" 
 		fill_in "Email", with: "wuconnie@seas.upenn.edu" 
-		select "dessert", from: "Recipes" 
+		select "Dessert", from: "Recipes" 
 		click_on "Create Chef"
 
 		page.has_content? "Chef was successfully created"

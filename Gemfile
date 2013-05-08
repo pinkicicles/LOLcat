@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'bootstrap-sass', '2.1'
 gem 'devise'
 gem 'jquery-ui-rails'
+gem 'newrelic_rpm'
 
 gem "watu_table_builder", :require => "table_builder", :git => "git://github.com/watu/table_builder.git"
 
@@ -27,7 +28,12 @@ end
 
 group :production do
 	gem 'pg'
+
  end
+
+configure :production do
+  require 'newrelic_rpm'
+end
 
 
 # Gems used only for assets and not required

@@ -28,6 +28,8 @@
 <% end %>
 </table>
 
+<center><a class="btn btn-large btn-success" href="/meals/new">Create A New Meal</a></center>
+<br></br>
 <div id="calendar">
  <h2 id="month">
     <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
@@ -49,4 +51,4 @@
 
 <br />
 
-<%= link_to 'New Meal', new_meal_path %>
+

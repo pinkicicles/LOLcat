@@ -31,10 +31,6 @@ group :production do
 
  end
 
-configure :production do
-  require 'newrelic_rpm'
-end
-
 
 # Gems used only for assets and not required
 # in production environments by default.

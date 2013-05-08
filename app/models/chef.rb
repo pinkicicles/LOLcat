@@ -8,7 +8,7 @@ class Chef < ActiveRecord::Base
 
   validates :name, uniqueness: true, presence: true
 
-  scope :dessert_chefs, where(recipes: "dessert")
+  scope :dessert_chefs, where(recipes: "Dessert")
 
 end
 

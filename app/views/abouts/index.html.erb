@@ -1,21 +1,8 @@
-<h1>Listing abouts</h1>
+<h1>About Foodie Connect</h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container">
 
-<% @abouts.each do |about| %>
-  <tr>
-    <td><%= link_to 'Show', about %></td>
-    <td><%= link_to 'Edit', edit_about_path(about) %></td>
-    <td><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+      <h1>How Does it Work?</h1>
+      <p>If you are a Foodie this is perfect for you! Whether you like to cook or like to eat you'll find many ways to satisfy your appetite<br> If you like to cook, sign up to be a chef on the home page. If you like to eat check out the calendar and create a meal with a chef!</p>
 
-<br />
-
-<%= link_to 'New About', new_about_path %>
+    </div> <!-- /container -->

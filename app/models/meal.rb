@@ -10,4 +10,10 @@ class Meal < ActiveRecord::Base
 
   validates :chef, presence: true
 
+  validates :pickup_time, presence: true
+
+  validates :description, presence: true
+
+  validates :location, presence: true
+
 end
